@@ -11,6 +11,24 @@
             return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
 
+        var Request=function(){
+            this.getParameter=function(name){
+            var trnval = '';
+            var nowAddress=unescape(location.href);
+            var parameters=(nowAddress.slice(nowAddress.indexOf('?')+1, nowAddress.length)).split('&');
+            for(var i = 0; i<parameters.length; i++){
+                var varName=parameters[i].split('=')[0];
+                if(varName.toUpperCase() == name.toUpperCase()){
+                    rtnval=parameters[i].split('=')[1];
+                    break;
+                }
+            }
+            document.write(rtnval);
+            }
+        }
+
+        request.getParameter('lon');
+
     </script>
     
 </head>
@@ -24,7 +42,7 @@
         var lon = getParameterByName('lon');
         document.write(lat + ', ' + lon );
 
-         document.getParameterByName("lat").innerHTML = lat + " " + lon; 
+        //  document.getParameterByName("lat").innerHTML = lat + " " + lon; 
         //  document.getElementById("data").innerHTML=ball;
 
 var mapContainer = document.getElementById('kakao'), // 지도를 표시할 div 
