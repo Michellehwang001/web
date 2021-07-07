@@ -39,12 +39,12 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bb3058b5de4a712fc2234784a0bc4075"></script>
 <script>
         let lat = getParameterByName('lat');
-        let lon = getParameterByName('lon');
+        let lng = getParameterByName('lng');
         document.write(lat + ' - ' + lon );
 
     var mapContainer = document.getElementById('kakao'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(lat, lon), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
