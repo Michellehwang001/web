@@ -8,8 +8,7 @@
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                     results = regex.exec(location.search);
-            results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-            document.write(results);
+            return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
 
         var Request=function(){
@@ -43,12 +42,9 @@
         var lon = getParameterByName('lon');
         document.write(lat + ' - ' + lon );
 
-        //  document.getParameterByName("lat").innerHTML = lat + " " + lon; 
-        //  document.getElementById("data").innerHTML=ball;
-
 var mapContainer = document.getElementById('kakao'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(getParameterByName('lat'), getParameterByName('lon')), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(document.innerHTML = lat, document.innerHTML = lon), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
