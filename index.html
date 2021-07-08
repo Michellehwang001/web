@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>지도 생성하기</title>
+    <title>Kakao Map</title>
     <script>
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -19,8 +19,8 @@
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bb3058b5de4a712fc2234784a0bc4075"></script>
 <script>
-        let lat = getParameterByName('lat');
-        let lng = getParameterByName('lng');
+        let lat = getParameterByName('lat'); 
+        let lng = getParameterByName('lng'); 
 
         var mapContainer = document.getElementById('kakao'), // 지도를 표시할 div 
         mapOption = { 
